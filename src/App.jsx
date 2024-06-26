@@ -47,14 +47,10 @@ const App = () => {
       companyId: selectedCompany,
       question,
       answer: "",
-      timestamp: new Date().toLocaleString(), // Add timestamp here
+      timestamp: new Date().toLocaleString(),
     };
     setForum([...forum, newQuestion]);
     setResponse("Question submitted successfully");
-  };
-
-  const handleAnswerSubmit = (id, answer) => {
-    setForum(forum.map((q) => (q.id === id ? { ...q, answer } : q)));
   };
 
   const handleOpenQuestionModal = () => {
@@ -105,7 +101,6 @@ const App = () => {
           {selectedCompany && (
             <Forum
               forum={forum.filter((q) => q.companyId === selectedCompany)}
-              onAnswerSubmit={handleAnswerSubmit}
             />
           )}
         </div>

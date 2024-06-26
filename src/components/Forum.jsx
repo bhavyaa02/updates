@@ -1,21 +1,6 @@
 import React, { useState } from "react";
 
-const Forum = ({ forum, onAnswerSubmit }) => {
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
-  const [answer, setAnswer] = useState("");
-
-  const handleAnswerChange = (e) => {
-    setAnswer(e.target.value);
-  };
-
-  const handleAnswerSubmit = () => {
-    if (selectedQuestion && answer) {
-      onAnswerSubmit(selectedQuestion, answer);
-      setSelectedQuestion(null);
-      setAnswer("");
-    }
-  };
-
+const Forum = ({ forum }) => {
   return (
     <div className="forum-container">
       <h2>Forum</h2>
@@ -29,25 +14,9 @@ const Forum = ({ forum, onAnswerSubmit }) => {
           <div key={id} className="card mb-3">
             <div className="card-body">
               <h5 className="card-title">Q: {question}</h5>
-              <p className="card-text"><small>Posted on: {timestamp}</small></p> {/* Display timestamp */}
-              {answer ? (
+              <p className="card-text"><small>Posted on: {timestamp}</small></p>
+              {answer && (
                 <p className="card-text">A: {answer}</p>
-              ) : (
-                selectedQuestion === id && (
-                  <>
-                    <textarea
-                      value={answer}
-                      onChange={handleAnswerChange}
-                      placeholder="Type your answer here"
-                    ></textarea>
-                    <button onClick={handleAnswerSubmit}>Submit</button>
-                  </>
-                )
-              )}
-              {!answer && (
-                <button onClick={() => setSelectedQuestion(id)}>
-                  Answer
-                </button>
               )}
             </div>
           </div>
