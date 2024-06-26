@@ -1,0 +1,300 @@
+/* Global Reset */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* UpdateList.css */
+
+/* Table Container */
+.perfectMatch {
+  padding: 50px 0 30px 0;
+  width: 40%;
+}
+.perfectMatch h2 {
+  font-family: "Open Sans";
+  font-size: 36px;
+  color: #2e2a7f;
+  display: block;
+  font-weight: 900;
+}
+.perfectMatch p {
+  font-size: 20px;
+
+  font-family: "Poppins";
+}
+.line {
+  height: 10px;
+  background-color: #003b94;
+  width: 68%;
+  margin-top: 10px;
+}
+.component-container {
+  margin-top: 20px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Table Header */
+.table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Table Body */
+.table td {
+  padding: 15px;
+  border-bottom: 1px solid #dee2e6;
+  color: #555;
+
+  font-weight: 600;
+}
+
+/* Alternate Row Background */
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Stickers Icon */
+.table .stickers-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table-container {
+  margin-bottom: 40px;
+}
+.table-container h2 {
+}
+.table thead tr th {
+  background-color: #172d56;
+  color: #fff;
+}
+/* Stickers Icon Color */
+.table .stickers-icon svg {
+  color: #0e69f2;
+}
+
+/* Table Hover Effect */
+.table tbody tr:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+.buttonContainer {
+  text-align: center;
+}
+.button-group {
+  margin-top: 20px;
+}
+/* Body */
+/* App.css */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.col-md-6 {
+  flex: 1;
+  margin: 10px;
+}
+
+.component-container,
+.forum-container {
+  width: 95vw;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #e7e9f3;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: #1577c6;
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cacfd4;
+  background-color: #f8f9fa;
+  color: #495057;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.btn-clear {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-clear:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal[open] {
+  display: flex;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.primary {
+  background-color: #0056b3;
+  color: #fff;
+  margin: 0 10px 0 0;
+}
+
+button.primary:hover {
+  background-color: #007bff;
+}
+
+button.secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+button.secondary:hover {
+  background-color: #545b62;
+}
+
+/* Forum Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.tab:hover {
+  border-bottom: 2px solid #007bff;
+}
+
+/* Forum Cards */
+.card {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  margin-bottom: 15px;
+  
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e8;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+
