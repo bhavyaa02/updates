@@ -1,3 +1,15 @@
+/* styles.css */
+
+/* Global Reset */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Component Container */
 /* Global Reset */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
@@ -6,7 +18,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* UpdateList.css */
 
 /* Table Container */
@@ -109,7 +120,6 @@
   box-sizing: border-box;
 }
 
-
 /* Body */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -125,7 +135,6 @@ body {
 }
 
 .row {
-  display: flex;
   width: 100%;
 }
 
@@ -134,12 +143,11 @@ body {
   margin: 10px;
 }
 
-.component-container,
-.forum-container {
+.component-container {
   width: 95vw;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #e7e9f3;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   color: #1577c6;
@@ -148,20 +156,19 @@ body {
 .dropdown-container {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
 }
 
 .form-label {
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
 }
 
 .form-select {
-  flex: 1;
+  width: 100%; /* Full width */
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #cacfd4;
+  border: 1px solid #ced4da;
   background-color: #f8f9fa;
   color: #495057;
   transition: border-color 0.3s ease;
@@ -173,6 +180,7 @@ body {
 }
 
 .btn-clear {
+  margin-left: 10px;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -186,6 +194,9 @@ body {
   background-color: #0056b3;
 }
 
+/* Other Styles (if any) */
+
+/* Other Styles (if any) */
 /* Modal */
 .modal {
   display: none; /* Hide by default */
@@ -281,7 +292,6 @@ button.secondary:hover {
 .card-text {
   font-size: 16px;
   margin-bottom: 15px;
-  
 }
 
 textarea {
@@ -297,4 +307,106 @@ textarea:focus {
   border-color: #007bff;
 }
 
+/* Button */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+button.primary {
+  background-color: #0056b3;
+  color: #fff;
+  margin: 0 10px 0 0;
+}
+
+button.primary:hover {
+  background-color: #007bff;
+}
+
+button.secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+button.secondary:hover {
+  background-color: #545b62;
+}
+
+/* List Group Item */
+.list-group-item {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Success Message */
+.text-success {
+  color: #28a745;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.tab:hover {
+  border-bottom: 2px solid #007bff;
+}
+.forum-container {
+  width: 95vw;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #e7e9f3;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: #1577c6;
+}
+
+/* Forum Cards */
+.card {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e8;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
